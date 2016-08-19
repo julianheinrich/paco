@@ -1,0 +1,15 @@
+Package: paco
+Type: Package
+Title: Parallel Coordinates
+Version: 0.0.1
+Author: Julian Heinrich
+Maintainer: Julian Heinrich <julian@joules.de>
+Description: This packages provides a parallel-coordinates implementation for R that allows users to visualize and interact with data frames using parallel coordinates.
+License: MIT
+Imports:
+    dplyr,
+    graph,
+    PairViz,
+    jsonlite
+RoxygenNote: 5.0.1
+LazyData: TRUE
