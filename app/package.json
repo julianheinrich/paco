@@ -118,6 +118,7 @@
     "build:debug": "node run build --debug",
     "publish": "node run publish",
     "publish:debug": "node run publish --debug",
-    "start": "node run"
+    "start": "node run",
+    "yolo": "npm version patch && npm run deploy && git push origin master --tags"
   }
 }

@@ -30,7 +30,6 @@ class Layout extends React.Component {
         <Drawer title="Navigation">
           <Navigation>
             <Link className="mdl-navigation__link" to="/">Home</Link>
-            <Link className="mdl-navigation__link" to="/patients">Patients</Link>
             <Link className="mdl-navigation__link" to="/about">About</Link>
           </Navigation>
         </Drawer>

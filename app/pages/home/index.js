@@ -9,8 +9,8 @@
  */
 
 import React, { PropTypes } from 'react';
-import Layout from '../../components/Layout';
-import Griddle from 'griddle-react';
+// import Layout from '../../components/Layout';
+// import Griddle from 'griddle-react';
 import ParallelCoordinates from '../../components/ParallelCoordinates/ParallelCoordinates';
 import { fetchData } from '../../actions';
 import { connect } from 'react-redux';
@@ -42,26 +42,26 @@ class HomePage extends React.Component {
   render() {
     const { data, isFetching } = this.props;
     return (
-      <Layout>
+      <div>
         {data.length > 0 &&
           <div>
             <ParallelCoordinates
               data={data}
             />
-            <Griddle
+          {/*<Griddle
               results={data}
               tableClassName="table"
               enableInfiniteScroll
               useFixedHeader
               resultsPerPage={5}
               bodyHeight={400}
-            />
+            />*/}
           </div>
         }
         {isFetching && data.length === 0 &&
           <h2>Loading...</h2>
         }
-      </Layout>
+      </div>
     );
   }
 

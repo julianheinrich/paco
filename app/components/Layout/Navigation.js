@@ -14,7 +14,6 @@ import Link from '../Link';
 class Navigation extends React.Component {
 
   componentDidMount() {
-    // window.componentHandler.upgradeDom();
     window.componentHandler.upgradeElement(this.root);
   }
 
@@ -26,7 +25,6 @@ class Navigation extends React.Component {
     return (
         <nav className="demo-navigation mdl-navigation mdl-color--blue-grey-800" ref={node => (this.root = node)}>
           <Link className="mdl-navigation__link" to="/">Home</Link>
-          <Link className="mdl-navigation__link" to="/patients">Patients</Link>
           <Link className="mdl-navigation__link" to="/about">About</Link>
         </nav>
     );
