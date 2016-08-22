@@ -24,7 +24,7 @@ const container = document.getElementById('container');
 
 require('./lib/opencpu-0.5.js');
 
-ocpu.seturl(CONFIG.ocpu.baseURL);
+ocpu.seturl(CONFIG.ocpu.baseURL); // eslint-disable-line no-undef
 
 const store = configureStore();
 
