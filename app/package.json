@@ -1,10 +1,19 @@
 {
   "name": "app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "engines": {
     "node": ">=6",
     "npm": ">=3.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianheinrich/paco.git"
+  },
+  "author": "Julian Heinrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julianheinrich/paco/issues"
   },
   "dependencies": {
     "babel-polyfill": "^6.9.1",
