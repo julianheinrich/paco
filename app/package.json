@@ -125,9 +125,9 @@
     "clean": "node run clean",
     "build": "node run build",
     "build:debug": "node run build --debug",
-    "publish": "node run publish",
-    "publish:debug": "node run publish --debug",
     "start": "node run",
-    "yolo": "npm version patch && node run deploy && git push origin master --tags"
+    "yolo": "npm version patch && node run publish && git push origin master --tags",
+    "deploy": "node run deploy",
+    "publish": "node run publish"
   }
 }

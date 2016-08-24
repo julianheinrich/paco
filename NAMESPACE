@@ -2,6 +2,7 @@
 
 export()
 export(.val)
+export(paco.data)
 export(paco.loadFromURL)
 export(paco.setData)
 export(paco.start)

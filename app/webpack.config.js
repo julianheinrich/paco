@@ -16,7 +16,7 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const pkg = require('./package.json');
 const pacoConfig = require('./config.js');
 
-const configEnvironment = global.CONFIG_ENV ? global.CONFIG_ENV : 'production';
+const configEnvironment = global.CONFIG_ENV !== undefined ? global.CONFIG_ENV : 'production';
 const isDebug = global.DEBUG === false ? false : !process.argv.includes('--release');
 const isVerbose = process.argv.includes('--verbose') || process.argv.includes('-v');
 const useHMR = !!global.HMR; // Hot Module Replacement (HMR)
@@ -53,8 +53,8 @@ const config = {
   output: {
     path: path.resolve(__dirname, './public/dist'),
     publicPath: `${baseURL}/dist/`,
-    filename: isDebug ? '[name].js?[hash]' : '[name].[hash].js',
-    chunkFilename: isDebug ? '[id].js?[chunkhash]' : '[id].[chunkhash].js',
+    filename: isDebug ? '[name].js?[hash]' : '[name].js',
+    chunkFilename: isDebug ? '[id].js?[chunkhash]' : '[id].js',
     sourcePrefix: '  ',
   },
 
@@ -120,7 +120,7 @@ const config = {
             sourceMap: isDebug,
             // CSS Modules https://github.com/css-modules/css-modules
             modules: true,
-            localIdentName: isDebug ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]',
+            localIdentName: isDebug ? '[name]_[local]_[hash:base64:3]' : '[name]',
             // CSS Nano http://cssnano.co/options/
             minimize: !isDebug,
           })}`,

@@ -6,7 +6,13 @@ module.exports = {
     },
   },
   production: {
-    baseURL: '/ocpu/library/paco/www',
+    baseURL: '',
+    ocpu: {
+      baseURL: '../R',
+    },
+  },
+  staging: {
+    baseURL: '',
     ocpu: {
       baseURL: '../R',
     },
