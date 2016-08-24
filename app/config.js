@@ -12,7 +12,7 @@ module.exports = {
     },
   },
   staging: {
-    baseURL: '',
+    baseURL: '.',
     ocpu: {
       baseURL: '../R',
     },
