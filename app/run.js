@@ -84,7 +84,7 @@ tasks.set('bundle', () => {
 // -----------------------------------------------------------------------------
 tasks.set('build', () => {
   global.DEBUG = process.argv.includes('--debug') || false;
-  global.CONFIG_ENV = global.CONFIG_ENV ? global.CONFIG_ENV : 'production';
+  global.CONFIG_ENV = global.CONFIG_ENV ? global.CONFIG_ENV : global.DEBUG ? 'development' : 'production';
   return Promise.resolve()
     .then(() => run('clean'))
     .then(() => run('bundle'))

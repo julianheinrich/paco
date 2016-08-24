@@ -126,7 +126,7 @@
     "build": "node run build",
     "build:debug": "node run build --debug",
     "start": "node run",
-    "yolo": "npm version patch && node run publish && git push origin master --tags",
+    "yolo": "npm version patch && node run build && git push origin master --tags && surge -p public -d paco.surge.sh",
     "deploy": "node run deploy",
     "publish": "node run publish"
   }

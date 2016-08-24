@@ -44,7 +44,7 @@ module.exports = function routesLoader(source) {
   const routes = JSON.parse(source);
 
   for (const route of routes) {
-    route.path = `${baseURL}${route.path}`;
+    // route.path = `${baseURL}${route.path}`;
     const keys = [];
     const pattern = toRegExp(route.path, keys);
     const require = route.chunk && route.chunk === 'main' ?

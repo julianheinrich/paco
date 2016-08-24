@@ -8,11 +8,11 @@ module.exports = {
   production: {
     baseURL: '',
     ocpu: {
-      baseURL: '../R',
+      baseURL: 'https://julianheinrich.ocpu.io/paco/R',
     },
   },
   staging: {
-    baseURL: '.',
+    baseURL: '',
     ocpu: {
       baseURL: '../R',
     },
